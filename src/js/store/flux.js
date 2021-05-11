@@ -1,18 +1,9 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+			personajes: [],
+			planetas: [],
+			favoritos: []
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -32,11 +23,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 						return res.json();
 					})
 					.then(data => {
-						setStore({ planets: data.results });
+						console.log("aqui", data);
+						setStore({ planetas: data.results });
 					})
 					.catch(err => {
 						console.log(err);
 					});
+
 				fetch("https://swapi.dev/api/people/", {
 					method: "GET",
 					headers: header
@@ -45,7 +38,30 @@ const getState = ({ getStore, getActions, setStore }) => {
 						return res.json();
 					})
 					.then(data => {
-						setStore({ characters: data.results });
+						console.log("aqui", data);
+						setStore({ personajes: data.results });
+					})
+					.catch(err => {
+						console.log(err);
+					});
+			},
+
+			guardarFavoritos(favoritos) {
+				setStore({ favoritos: favoritos });
+			},
+
+			getDetailElement(url) {
+				fetch(url, {
+					method: "GET",
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(res => {
+						return res.json();
+					})
+					.then(data => {
+						setStore({});
 					})
 					.catch(err => {
 						console.log(err);
