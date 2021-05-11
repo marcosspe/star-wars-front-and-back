@@ -48,24 +48,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			guardarFavoritos(favoritos) {
 				setStore({ favoritos: favoritos });
-			},
-
-			getDetailElement(url) {
-				fetch(url, {
-					method: "GET",
-					headers: {
-						"Content-Type": "application/json"
-					}
-				})
-					.then(res => {
-						return res.json();
-					})
-					.then(data => {
-						setStore({});
-					})
-					.catch(err => {
-						console.log(err);
-					});
 			}
 		}
 	};

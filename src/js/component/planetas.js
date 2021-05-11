@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext.js";
-import "../../styles/personajes.scss";
+//import "../../styles/personajes.scss";
 import { Link } from "react-router-dom";
 
-function Personajes() {
+function Planetas() {
 	const { store } = useContext(Context);
 
-	const arrCards = store.personajes.map((item, index) => {
+	const arrCards = store.planetas.map((item, index) => {
 		return (
 			<div className="col" key={index}>
 				<div className="card" style={{ width: "18rem" }}>
@@ -18,7 +18,7 @@ function Personajes() {
 						<h5 className="card-title">{item.name}</h5>
 						<p>aksdhf dihfdiuh vdihfhgaoefj as sdn fhfja sdjv sdfbalojf hfjds</p>
 						<div className="line-btn">
-							<Link to={"/single/" + index} className="btn btn-outline-primary">
+							<Link to={"/single/" + item.uid} className="btn btn-outline-primary">
 								Learn more!
 							</Link>
 						</div>
@@ -35,4 +35,4 @@ function Personajes() {
 	);
 }
 
-export default Personajes;
+export default Planetas;
