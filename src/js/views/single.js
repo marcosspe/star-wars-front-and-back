@@ -6,7 +6,10 @@ import { Context } from "../store/appContext";
 export const Single = () => {
 	const { store, actions } = useContext(Context);
 	const { id } = useParams();
-	console.log("param", useParams());
+	useEffect(() => {
+		actions.getDetallePersonajes(id);
+	}, []);
+
 	return (
 		<div className="card mb-3" style={{ maxwidth: "540px" }}>
 			<div className="row no-gutters">
@@ -15,8 +18,8 @@ export const Single = () => {
 				</div>
 				<div className="col-md-8">
 					<div className="card-body">
-						<h5 className="card-title">{store.personajes.results[id].name}</h5>
-						<p className="card-text" />
+						<h5 className="card-title">{store.propiedadesPersonajes.name}</h5>
+						<p className="card-text">{store.detallePersonaje.description}</p>
 						<p className="card-text">
 							<small className="text-muted">Last updated 3 mins ago</small>
 						</p>
