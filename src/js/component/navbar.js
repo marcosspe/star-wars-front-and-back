@@ -8,6 +8,7 @@ export const Navbar = () => {
 			<Link to="/">
 				<img id="logo" src={logo} />
 			</Link>
+
 			<div className="col-2 text-right">
 				<div classNAme="dropdown mb-3">
 					<button

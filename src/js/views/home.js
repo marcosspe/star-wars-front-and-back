@@ -9,7 +9,7 @@ export const Home = () => (
 		<div className="scrolling-wrapper-flexbox">
 			<Personajes />
 		</div>
-		<h1 className="text-warning">PLANETAS</h1>
+		<h1 className="text-warning mt-3">PLANETAS</h1>
 		<div className="scrolling-wrapper-flexbox">
 			<Planetas />
 		</div>

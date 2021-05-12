@@ -7,7 +7,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			detallePersonaje: [],
 			propiedadesPersonajes: [],
 			detallePlaneta: [],
-			propiedadesPlanetas: []
+			propiedadesPlanetas: [],
+			favoritos: []
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -84,6 +85,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(err => {
 						console.log(err);
 					});
+			},
+
+			addFavorite: name => {
+				let favoritosCopy = [...store.favoritos];
+				favoritosCopy.push(name);
+				setStore({ favoritos: favoritosCopy });
+			},
+
+			removeFavorite: name => {
+				let favoritosCopy = [...store.favoritos];
+				setStore({ favoritos: favoritosCopy.filter(item => item !== element) });
 			}
 		}
 	};
