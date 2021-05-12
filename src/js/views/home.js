@@ -5,11 +5,11 @@ import Planetas from "../component/planetas.js";
 
 export const Home = () => (
 	<div className="container">
-		<h1>PERSONAJES</h1>
+		<h1 className="text-warning">PERSONAJES</h1>
 		<div className="scrolling-wrapper-flexbox">
 			<Personajes />
 		</div>
-		<h1>PLANETAS</h1>
+		<h1 className="text-warning">PLANETAS</h1>
 		<div className="scrolling-wrapper-flexbox">
 			<Planetas />
 		</div>

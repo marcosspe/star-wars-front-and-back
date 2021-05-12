@@ -18,7 +18,7 @@ function Planetas() {
 						<h5 className="card-title">{item.name}</h5>
 						<p>aksdhf dihfdiuh vdihfhgaoefj as sdn fhfja sdjv sdfbalojf hfjds</p>
 						<div className="line-btn">
-							<Link to={"/single/" + item.uid} className="btn btn-outline-primary">
+							<Link to={"/singleplanet/" + item.uid} className="btn btn-outline-primary">
 								Learn more!
 							</Link>
 						</div>
