@@ -8,10 +8,19 @@ export const Navbar = () => {
 			<Link to="/">
 				<img id="logo" src={logo} />
 			</Link>
-			<div className="ml-auto">
-				<Link to="/demo">
-					<button className="btn btn-primary">Check the Context in action</button>
-				</Link>
+			<div className="col-2 text-right">
+				<div classNAme="dropdown mb-3">
+					<button
+						className="btn btn-outline-warning dropdown-toggle"
+						type="button"
+						id="dropdownMenuButton"
+						data-toggle="dropdown"
+						aria-haspopup="true"
+						aria-expanded="false">
+						Favorites
+					</button>
+					<div className="dropdown-menu mt-3 " aria-labelledby="dropdownMenuButton" />
+				</div>
 			</div>
 		</nav>
 	);
