@@ -12,46 +12,62 @@ export const Singleplanet = () => {
 	}, []);
 
 	return (
-		<div className="card mb-3" style={{ maxwidth: "540px" }}>
-			<div className="row no-gutters">
-				<div className="col-md-4">
-					<img
-						id="imgpers"
-						src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/star-wars-logo-1596192662.jpg"
-						alt="..."
-					/>
+		<div className="container" id="bodyplanet">
+			<div className="row">
+				<div className="col">
+					<div className="container imgsingle">
+						<img
+							id="imgpers"
+							src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/star-wars-logo-1596192662.jpg"
+							alt="..."
+						/>
+					</div>
 				</div>
-				<div className="col-md-8">
-					<div className="card-body">
-						<h5 className="card-title">{store.propiedadesPlanetas.name}</h5>
-						<p className="card-text">{store.detallePlaneta.description}</p>
+				<div className="col">
+					<div className="container singletitle">
+						<h1 className="card-title text-white">{store.propiedadesPlanetas.name}</h1>
+						<h4 className="card-text text-white">{store.detallePlaneta.description}</h4>
 					</div>
 				</div>
 			</div>
-			<div className="row">
-				<div className="col">
-					<p className="card-text">Name</p>
-					<p className="card-text">{store.propiedadesPlanetas.name}</p>
-				</div>
-				<div className="col">
-					<p className="card-text">Climate</p>
-					<p className="card-text">{store.propiedadesPlanetas.climate}</p>
-				</div>
-				<div className="col">
-					<p className="card-text">Population</p>
-					<p className="card-text">{store.propiedadesPlanetas.population}</p>
-				</div>
-				<div className="col">
-					<p className="card-text">Orbital Period</p>
-					<p className="card-text">{store.propiedadesPlanetas.orbital_period}</p>
-				</div>
-				<div className="col">
-					<p className="card-text">Rotation Period</p>
-					<p className="card-text">{store.propiedadesPlanetas.rotation_period}</p>
-				</div>
-				<div className="col">
-					<p className="card-text">Diameter</p>
-					<p className="card-text">{store.propiedadesPlanetas.diameter}</p>
+			<div className="container text-center">
+				<div className="row align-center pt-3" id="datos">
+					<div className="col">
+						<h5 className="card-text">
+							<strong>Name</strong>
+						</h5>
+						<p className="card-text">{store.propiedadesPlanetas.name}</p>
+					</div>
+					<div className="col">
+						<h5 className="card-text">
+							<strong>Climate</strong>
+						</h5>
+						<p className="card-text">{store.propiedadesPlanetas.climate}</p>
+					</div>
+					<div className="col">
+						<h5 className="card-text">
+							<strong>Population</strong>
+						</h5>
+						<p className="card-text">{store.propiedadesPlanetas.population}</p>
+					</div>
+					<div className="col">
+						<h5 className="card-text">
+							<strong>Orbital Period</strong>
+						</h5>
+						<p className="card-text">{store.propiedadesPlanetas.orbital_period}</p>
+					</div>
+					<div className="col">
+						<h5 className="card-text">
+							<strong>Rotation Period</strong>
+						</h5>
+						<p className="card-text">{store.propiedadesPlanetas.rotation_period}</p>
+					</div>
+					<div className="col">
+						<h5 className="card-text">
+							<strong>Diameter</strong>
+						</h5>
+						<p className="card-text">{store.propiedadesPlanetas.diameter}</p>
+					</div>
 				</div>
 			</div>
 		</div>

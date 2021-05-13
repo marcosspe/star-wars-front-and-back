@@ -12,46 +12,62 @@ export const Singlecharacter = () => {
 	}, []);
 
 	return (
-		<div className="card mb-3" style={{ maxwidth: "540px" }}>
-			<div className="row no-gutters">
-				<div className="col-md-4">
-					<img
-						id="imgpers"
-						src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/star-wars-logo-1596192662.jpg"
-						alt="..."
-					/>
+		<div className="container" id="bodycharacter">
+			<div className="row">
+				<div className="col">
+					<div className="container imgsingle">
+						<img
+							id="imgpers"
+							src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/star-wars-logo-1596192662.jpg"
+							alt="..."
+						/>
+					</div>
 				</div>
-				<div className="col-md-8">
-					<div className="card-body">
-						<h5 className="card-title">{store.propiedadesPersonajes.name}</h5>
-						<p className="card-text">{store.detallePersonaje.description}</p>
+				<div className="col">
+					<div className="container singletitle">
+						<h1 className="card-title text-white">{store.propiedadesPersonajes.name}</h1>
+						<h4 className="card-text text-white">{store.detallePersonaje.description}</h4>
 					</div>
 				</div>
 			</div>
-			<div className="row">
-				<div className="col">
-					<p className="card-text">Name</p>
-					<p className="card-text">{store.propiedadesPersonajes.name}</p>
-				</div>
-				<div className="col">
-					<p className="card-text">Birth Year</p>
-					<p className="card-text">{store.propiedadesPersonajes.birth_year}</p>
-				</div>
-				<div className="col">
-					<p className="card-text">Gender</p>
-					<p className="card-text">{store.propiedadesPersonajes.gender}</p>
-				</div>
-				<div className="col">
-					<p className="card-text">Height</p>
-					<p className="card-text">{store.propiedadesPersonajes.height}</p>
-				</div>
-				<div className="col">
-					<p className="card-text">Skin Color</p>
-					<p className="card-text">{store.propiedadesPersonajes.skin_color}</p>
-				</div>
-				<div className="col">
-					<p className="card-text">Eye Color</p>
-					<p className="card-text">{store.propiedadesPersonajes.eye_color}</p>
+			<div className="container text-center">
+				<div className="row align-center pt-3" id="datos">
+					<div className="col">
+						<h5 className="card-text">
+							<strong>Name</strong>
+						</h5>
+						<p className="card-text">{store.propiedadesPersonajes.name}</p>
+					</div>
+					<div className="col">
+						<h5 className="card-text">
+							<strong>Birth Year</strong>
+						</h5>
+						<p className="card-text">{store.propiedadesPersonajes.birth_year}</p>
+					</div>
+					<div className="col">
+						<h5 className="card-text">
+							<strong>Gender</strong>
+						</h5>
+						<p className="card-text">{store.propiedadesPersonajes.gender}</p>
+					</div>
+					<div className="col">
+						<h5 className="card-text">
+							<strong>Height</strong>
+						</h5>
+						<p className="card-text">{store.propiedadesPersonajes.height}</p>
+					</div>
+					<div className="col">
+						<h5 className="card-text">
+							<strong>Skin Color</strong>
+						</h5>
+						<p className="card-text">{store.propiedadesPersonajes.skin_color}</p>
+					</div>
+					<div className="col">
+						<h5 className="card-text">
+							<strong>Eye Color</strong>
+						</h5>
+						<p className="card-text">{store.propiedadesPersonajes.eye_color}</p>
+					</div>
 				</div>
 			</div>
 		</div>

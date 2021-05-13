@@ -6,7 +6,10 @@
     height: 60px;
 }
 body{
-    background-image: url("https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-25.jpg");
+    background-image: url("https://media.giphy.com/media/MGuG2r3JYAqKQ/giphy.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 #bodycard{
@@ -14,4 +17,24 @@ body{
 }
 #footcard{
     background-color: black;
+}
+
+#bodyplanet{
+    background-image: url("https://3.bp.blogspot.com/-rSasN8xcij0/XFcz0hyOyaI/AAAAAAAAFbM/lk3N9U-gdzE083VEPL0nbCFrSPc2tCEYACHMYCw/s1600/star-wars-planet-moon-battle-space-art-wallpapers-hd-desktop.jpg");
+    height: 700px;
+}
+#bodycharacter{
+    background-image: url("https://periodicoelpunto.com/wp-content/uploads/2019/11/120-1207564_download-star-wars-saga-wallpaper-gallery-star-wars.jpg");
+    height: 700px;
+}
+ #datos{
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100px;
+    margin-top: 110px;
+}
+.imgsingle{
+    margin-top: 40px;
+}
+.singletitle{
+    margin-top: 40px;
 }
