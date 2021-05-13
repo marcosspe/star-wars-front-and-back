@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 function Personajes() {
-	const { store } = useContext(Context);
+	const { store, actions } = useContext(Context);
 
 	const arrCards = store.personajes.map((item, index) => {
 		return (
@@ -27,7 +27,7 @@ function Personajes() {
 								Learn more!
 							</Link>
 						</div>
-						<button className="btn btn-outline-warning ">
+						<button className="btn btn-outline-warning" onClick={() => actions.agregarFavoritos(item.name)}>
 							<i className="far fa-heart" />
 							<i className="fas fa-heart d-none" />
 						</button>

@@ -3,7 +3,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			personajes: [],
 			planetas: [],
-			favoritos: [],
 			detallePersonaje: [],
 			propiedadesPersonajes: [],
 			detallePlaneta: [],
@@ -51,10 +50,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					});
 			},
 
-			guardarFavoritos(favoritos) {
-				setStore({ favoritos: favoritos });
-			},
-
 			getDetallePersonajes: uid => {
 				fetch("https://www.swapi.tech/api/people/" + uid, {
 					method: "GET"
@@ -86,16 +81,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.log(err);
 					});
 			},
-
-			addFavorite: name => {
-				let favoritosCopy = [...store.favoritos];
-				favoritosCopy.push(name);
-				setStore({ favoritos: favoritosCopy });
+			agregarFavoritos: elemento => {
+				const store = getStore();
+				let favoritosCopia = [...store.favoritos];
+				favoritosCopia.push(elemento);
+				setStore({ favoritos: favoritosCopia });
 			},
-
-			removeFavorite: name => {
-				let favoritosCopy = [...store.favoritos];
-				setStore({ favoritos: favoritosCopy.filter(item => item !== element) });
+			quitarFavoritos: elemento => {
+				const store = getStore();
+				let favoritosCopia = [...store.favoritos];
+				setStore({ favoritos: favoritosCopia.filter(item => item !== elemento) });
 			}
 		}
 	};
