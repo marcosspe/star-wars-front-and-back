@@ -10,7 +10,7 @@ function Personajes() {
 	const arrCards = store.personajes.map((item, index) => {
 		return (
 			<div className="col mb-3" key={index}>
-				<div className="card" style={{ width: "18rem" }}>
+				<div className="card">
 					<img
 						src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/star-wars-logo-1596192662.jpg"
 						className="card-img-top"

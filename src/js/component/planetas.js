@@ -4,12 +4,12 @@ import { Context } from "../store/appContext.js";
 import { Link } from "react-router-dom";
 
 function Planetas() {
-	const { store } = useContext(Context);
+	const { store, actions } = useContext(Context);
 
 	const arrCards = store.planetas.map((item, index) => {
 		return (
 			<div className="col mb-3" key={index}>
-				<div className="card" style={{ width: "18rem" }}>
+				<div className="card">
 					<img
 						src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/star-wars-logo-1596192662.jpg"
 						className="card-img-top"
@@ -26,7 +26,7 @@ function Planetas() {
 								Learn more!
 							</Link>
 						</div>
-						<button className="btn btn-outline-warning ">
+						<button className="btn btn-outline-warning" onClick={() => actions.agregarFavoritos(item.name)}>
 							<i className="far fa-heart" />
 							<i className="fas fa-heart d-none" />
 						</button>
