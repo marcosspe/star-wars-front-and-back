@@ -10,23 +10,20 @@ function Planetas() {
 		return (
 			<div className="col mb-3" key={index}>
 				<div className="card">
-					<img
-						src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/star-wars-logo-1596192662.jpg"
-						className="card-img-top"
-					/>
+					<img src={item.Img} className="card-img-top" />
 					<div className="card-body" id="bodycard">
-						<h5 className="card-title text-white text-center">{item.name}</h5>
+						<h5 className="card-title text-white text-center">{item.Name}</h5>
 						<p className="text-white-50 text-center">
-							aksdhf dihfdiuh vdihfhgaoefj as sdn fhfja sdjv sdfbalojf hfjds
+							A planet that belongs to the Star Wars Cinematic Universe
 						</p>
 					</div>
 					<div className="card-footer d-flex justify-content-between" id="footcard">
 						<div className="line-btn">
-							<Link to={"/singleplanet/" + item.uid} className="btn btn-outline-primary">
+							<Link to={"/singleplanet/" + item.id} className="btn btn-outline-primary">
 								Learn more!
 							</Link>
 						</div>
-						<button className="btn btn-outline-warning" onClick={() => actions.agregarFavoritos(item.name)}>
+						<button className="btn btn-outline-warning" onClick={() => actions.agregarFavoritos(item.Name)}>
 							<i className="far fa-heart" />
 							<i className="fas fa-heart d-none" />
 						</button>

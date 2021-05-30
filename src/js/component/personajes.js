@@ -15,7 +15,7 @@ function Personajes() {
 					<div className="card-body" id="bodycard">
 						<h5 className="card-title text-white text-center">{item.Name}</h5>
 						<p className="text-white-50 text-center">
-							aksdhf dihfdiuh vdihfhgaoefj as sdn fhfja sdjv sdfbalojf hfjds
+							A character that belongs to the Star Wars Cinematic Universe
 						</p>
 					</div>
 					<div className="card-footer d-flex justify-content-between" id="footcard">

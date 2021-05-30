@@ -16,17 +16,15 @@ export const Singleplanet = () => {
 			<div className="row">
 				<div className="col">
 					<div className="container imgsingle">
-						<img
-							id="imgpers"
-							src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/star-wars-logo-1596192662.jpg"
-							alt="..."
-						/>
+						<img id="imgpers" src={store.detallePlaneta.Img} alt="..." />
 					</div>
 				</div>
 				<div className="col">
 					<div className="container singletitle">
-						<h1 className="card-title text-white">{store.propiedadesPlanetas.name}</h1>
-						<h4 className="card-text text-white">{store.detallePlaneta.description}</h4>
+						<h1 className="card-title text-white">{store.detallePlaneta.Name}</h1>
+						<h4 className="card-text text-white">
+							A planet that belongs to the Star Wars Cinematic Universe
+						</h4>
 					</div>
 				</div>
 			</div>
@@ -36,37 +34,37 @@ export const Singleplanet = () => {
 						<h5 className="card-text">
 							<strong>Name</strong>
 						</h5>
-						<p className="card-text">{store.propiedadesPlanetas.name}</p>
+						<p className="card-text">{store.detallePlaneta.Name}</p>
 					</div>
 					<div className="col">
 						<h5 className="card-text">
 							<strong>Climate</strong>
 						</h5>
-						<p className="card-text">{store.propiedadesPlanetas.climate}</p>
+						<p className="card-text">{store.detallePlaneta.Climate}</p>
 					</div>
 					<div className="col">
 						<h5 className="card-text">
 							<strong>Population</strong>
 						</h5>
-						<p className="card-text">{store.propiedadesPlanetas.population}</p>
+						<p className="card-text">{store.detallePlaneta.Population}</p>
 					</div>
 					<div className="col">
 						<h5 className="card-text">
 							<strong>Orbital Period</strong>
 						</h5>
-						<p className="card-text">{store.propiedadesPlanetas.orbital_period}</p>
+						<p className="card-text">{store.detallePlaneta.OrbitalPeriod}</p>
 					</div>
 					<div className="col">
 						<h5 className="card-text">
 							<strong>Rotation Period</strong>
 						</h5>
-						<p className="card-text">{store.propiedadesPlanetas.rotation_period}</p>
+						<p className="card-text">{store.detallePlaneta.RotationPeriod}</p>
 					</div>
 					<div className="col">
 						<h5 className="card-text">
 							<strong>Diameter</strong>
 						</h5>
-						<p className="card-text">{store.propiedadesPlanetas.diameter}</p>
+						<p className="card-text">{store.detallePlaneta.Diameter}</p>
 					</div>
 				</div>
 			</div>

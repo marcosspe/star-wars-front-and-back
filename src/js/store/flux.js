@@ -12,22 +12,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 			// Use getActions to call a function within a fuction
 			//exampleFunction: () => {},
-			loadDataPersonsYPlanets: () => {
-				/* Las personas */
-				console.log("entrandoooos");
-
+			loadSomeData: () => {
 				fetch(process.env.BACKEND_URL + "/people")
 					.then(resp => resp.json())
 					.then(resp => {
-						/* console.log(resp[0].name); */
 						setStore({ personajes: resp });
 					})
 					.catch(error => console.log(true));
-				/* Los planetas */
+
 				fetch(process.env.BACKEND_URL + "/planets")
 					.then(resp => resp.json())
 					.then(resp => {
-						/* console.log(resp[0].name); */
 						setStore({ planetas: resp });
 					})
 					.catch(error => console.log(true));
@@ -71,8 +66,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// 		});
 			// },
 
-			getDetallePersonajes: uid => {
-				fetch("https://www.swapi.tech/api/people/" + uid, {
+			getDetallePersonajes: id => {
+				fetch(process.env.BACKEND_URL + "/people/" + id, {
 					method: "GET"
 				})
 					.then(res => {
@@ -80,15 +75,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.then(data => {
 						console.log("aquiotra", data);
-						setStore({ detallePersonaje: data.result, propiedadesPersonajes: data.result.properties });
+						setStore({ detallePersonaje: data });
 					})
 					.catch(err => {
 						console.log(err);
 					});
 			},
 
-			getDetallePlanetas: uid => {
-				fetch("https://www.swapi.tech/api/planets/" + uid, {
+			getDetallePlanetas: id => {
+				fetch(process.env.BACKEND_URL + "/planets/" + id, {
 					method: "GET"
 				})
 					.then(res => {
@@ -96,7 +91,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.then(data => {
 						console.log("aquiotra", data);
-						setStore({ detallePlaneta: data.result, propiedadesPlanetas: data.result.properties });
+						setStore({ detallePlaneta: data });
 					})
 					.catch(err => {
 						console.log(err);
