@@ -1,49 +1,67 @@
 import React, { useState, useEffect, useContext } from "react";
+import pngwing from "../../img/pngwing.png";
 
 export const Registro = () => (
 	<div className="container mt-5">
-		<div className="container mt-5">
-			<h3 className="card-title text-center text-warning mt-5 mb-5">Registro</h3>
-			<div className="row">
-				<div className="col">
-					<p className="card-text text-warning">First_name:</p>
-					<input
-						name="first_name"
-						type="text"
-						className="form-control"
-						placeholder="first_name"
-						aria-label="first_name"
-					/>
-				</div>
-				<div className="col">
-					<p className="card-text text-warning">Last_name:</p>
-					<input
-						name="last_name"
-						type="text"
-						className="form-control"
-						placeholder="last_name"
-						aria-label="last_name"
-					/>
+		<div className="row">
+			<div className="col">
+				<div className="row" id="cardacceso">
+					<div className="col">
+						<img id="imgreg" src={pngwing} />
+					</div>
+					<div className="col" id="textacceso">
+						<h3 className="text text-warning">ÚNETE A LA FUERZA</h3>
+					</div>
 				</div>
 			</div>
-			<div className="row">
-				<div className="col">
-					<p className="card-text text-warning">Email</p>
-					<input name="email" type="text" className="form-control" placeholder="email" aria-label="email" />
+			<div id="login" className="col-4 border mb-5 border-warning rounded">
+				<div className="row mt-4" id="">
+					<div className="col">
+						<input
+							name="first_name"
+							type="text"
+							className="form-control"
+							placeholder="Nombre"
+							aria-label="Nombre"
+						/>
+					</div>
+					<div className="col">
+						<input
+							name="last_name"
+							type="text"
+							className="form-control"
+							placeholder="Apellido"
+							aria-label="Apellido"
+						/>
+					</div>
 				</div>
-				<div className="col">
-					<p className="card-text text-warning">Password</p>
-					<input
-						name="password"
-						type="password"
-						className="form-control"
-						placeholder="********"
-						aria-label="********"
-					/>
+				<div className="row mt-4" id="">
+					<div className="col">
+						<input
+							name="Email"
+							type="text"
+							className="form-control"
+							placeholder="Email"
+							aria-label="Email"
+						/>
+					</div>
 				</div>
-			</div>
-			<div className="text-right mt-2">
-				<button className="btn btn-outline-warning mr-2">Registro</button>
+				<div className="row mt-4">
+					<div className="col">
+						<input
+							name="Password"
+							type="password"
+							className="form-control"
+							placeholder="Password"
+							aria-label="********"
+						/>
+					</div>
+				</div>
+				<div className="container mt-4">
+					<button type="button" className="btn btn-outline-success btn-block">
+						Registrarte
+					</button>
+				</div>
 			</div>
 		</div>
 	</div>
