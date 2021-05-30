@@ -12,43 +12,64 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 			// Use getActions to call a function within a fuction
 			//exampleFunction: () => {},
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
+			loadDataPersonsYPlanets: () => {
+				/* Las personas */
+				console.log("entrandoooos");
 
-				const header = { "Content-Type": "application/json" };
-
-				fetch("https://www.swapi.tech/api/planets/", {
-					method: "GET",
-					headers: header
-				})
-					.then(res => {
-						return res.json();
+				fetch(process.env.BACKEND_URL + "/people")
+					.then(resp => resp.json())
+					.then(resp => {
+						/* console.log(resp[0].name); */
+						setStore({ personajes: resp });
 					})
-					.then(data => {
-						console.log("aqui", data);
-						setStore({ planetas: data.results });
+					.catch(error => console.log(true));
+				/* Los planetas */
+				fetch(process.env.BACKEND_URL + "/planets")
+					.then(resp => resp.json())
+					.then(resp => {
+						/* console.log(resp[0].name); */
+						setStore({ planetas: resp });
 					})
-					.catch(err => {
-						console.log(err);
-					});
-
-				fetch("https://www.swapi.tech/api/people/", {
-					method: "GET",
-					headers: header
-				})
-					.then(res => {
-						return res.json();
-					})
-					.then(data => {
-						console.log("aqui", data);
-						setStore({ personajes: data.results });
-					})
-					.catch(err => {
-						console.log(err);
-					});
+					.catch(error => console.log(true));
 			},
+
+			// loadSomeData: () => {
+			// 	/**
+			// 		fetch().then().then(data => setStore({ "foo": data.bar }))
+			// 	*/
+
+			// 	const header = { "Content-Type": "application/json" };
+
+			// 	fetch("https://www.swapi.tech/api/planets/", {
+			// 		method: "GET",
+			// 		headers: header
+			// 	})
+			// 		.then(res => {
+			// 			return res.json();
+			// 		})
+			// 		.then(data => {
+			// 			console.log("aqui", data);
+			// 			setStore({ planetas: data.results });
+			// 		})
+			// 		.catch(err => {
+			// 			console.log(err);
+			// 		});
+
+			// 	fetch("https://www.swapi.tech/api/people/", {
+			// 		method: "GET",
+			// 		headers: header
+			// 	})
+			// 		.then(res => {
+			// 			return res.json();
+			// 		})
+			// 		.then(data => {
+			// 			console.log("aqui", data);
+			// 			setStore({ personajes: data.results });
+			// 		})
+			// 		.catch(err => {
+			// 			console.log(err);
+			// 		});
+			// },
 
 			getDetallePersonajes: uid => {
 				fetch("https://www.swapi.tech/api/people/" + uid, {
